@@ -23,11 +23,13 @@ nav {
   align-items: center;
   margin-bottom: 2rem;
 }
+
 nav h3 {
   margin: 1rem;
   cursor: pointer;
   color: #718096;
 }
+
 nav h3:hover {
   color: white;
 }
@@ -90,5 +92,9 @@ button {
 
 input.input-error,
 select.input-error {
-  border-color: '#fc8181';
+  border-color: #fc8181;
+}
+
+button :disabled {
+  opacity: 0.35;
 }
