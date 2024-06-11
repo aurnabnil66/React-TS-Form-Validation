@@ -1,20 +1,21 @@
 import { useField } from "formik";
 
-interface CustomInputProps {
+interface CustomSelectProps {
   label: string;
   name: string;
   type?: string;
   placeholder?: string;
+  children: React.ReactNode;
 }
 
-const CustomInput = ({ label, ...props }: CustomInputProps) => {
+const CustomSelect = ({ label, ...props }: CustomSelectProps) => {
   const [field, meta] = useField(props);
   console.log(field);
   console.log(meta);
   return (
     <>
       <label>{label}</label>
-      <input
+      <select
         {...field}
         {...props}
         className={meta.touched && meta.error ? "input-error" : ""}
@@ -24,4 +25,4 @@ const CustomInput = ({ label, ...props }: CustomInputProps) => {
   );
 };
 
-export default CustomInput;
+export default CustomSelect;
